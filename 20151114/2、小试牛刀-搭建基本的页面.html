@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <!--内嵌式编写样式-->
+    <style type="text/css">
+        /*初始化常用标签的样式:因为这些标签在不同的浏览器中有自己的样式，为了统一操作，我们都从新设置为统一的值*/
+        body, div, img, input {
+            margin: 0;
+            padding: 0;
+            font-family: "\5FAE\8F6F\96C5\9ED1", Helvetica, sans-serif;
+            font-size: 14px;
+        }
+
+        img {
+            border: none;
+        }
+
+        input {
+            outline: none;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .box {
+            width: 100%;
+            height: 100%;
+            background: url("img/bg.jpg") no-repeat;
+            background-size: 100%; /*CSS3中新增加的属性:当前区域有多大,让背景图片也显示多大*/
+        }
+    </style>
+    <!--外链式引入-->
+    <link type="text/css" rel="stylesheet" href="css/test1.css"/>
+    <!--导入式引入-->
+    <style type="text/css">
+        @import "css/test2.css";
+    </style>
+</head>
+<body>
+<!--
+1、如何的给我们的HTML结构增加CSS样式
+  1)行内样式 ->直接的在HTML标签上增加style='....样式都写在这里'
+    <img src="img/logo.png" style="width: 270px; height: 125px;"/>
+    应用于单独的给某一个元素增加样式(一般在写css样式的时候我们都不用)
+
+  2)内嵌样式 ->在HEAD中增加style标签,然后把需要给元素设置的样式都写在style里面
+
+  3)外联样式 ->为了让HTML页面中的标签和我们的样式分离开，我们把样式写在一个外部的文件中，然后在通过link引入进来
+  <link type="text/css" rel="stylesheet" href="css/test1.css"/>
+
+  4)导入式 ->和外链式相同，都是把样式文件写在外面，然后通过@import导入进来
+   @import "css/test2.css";
+-->
+<!--给DIV加了一个样式类名 class="box"-->
+<div class="box">
+    <div class="inner">
+        <img src="img/logo.png" style="width: 270px; height: 125px;"/>
+        <input type="text" id="search"/>
+        <input type="button" id="submit" value="百度一下"/>
+    </div>
+</div>
+</body>
+</html>
