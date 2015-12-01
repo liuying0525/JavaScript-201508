@@ -16,6 +16,7 @@ origin  https://github.com/zhouxiaotian/JavaScript-201508.git (push)
 5、把本地最新的代码上传到自己的github仓库
     git add -A
     git commit -m"备注"
+(建议在每一次推送之前先拉取) git pull origin master
     git push origin master
 
 
