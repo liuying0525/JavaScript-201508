@@ -7,7 +7,7 @@ origin  https://github.com/zhouxiaotian/JavaScript-201508.git (fetch)
 origin  https://github.com/zhouxiaotian/JavaScript-201508.git (push)
 
 1、fork
-2、clone 
+2、git clone 网址 
 3、在自己本地增加和老师仓库的联系 
      git remote add 名字 老师仓库的地址      -> 查看是否连接成功  git remote -v     ->git remote rm 名字
 4、拉取老师的最新讲义
