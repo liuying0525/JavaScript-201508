@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script type="text/javascript">
+    var num=12;
+    var obj = {//obj赋值的三步：1，开辟一个堆内存。2，把对象中的属性名和属性值分别存储进来。3，把地址赋值给obj.
+        num : 13,
+            fn:(function (num) {
+                this.num = num +20;
+                num + =20;
+                return function (){
+                    this.num = num +20;
+                    num + = 20;
+                    console.log(num);
+                }
+    })(num)//obj.num这里会报错，因为fn（）返回的结果是自执行函数，所以num:13是执行完之后，最后赋值，地址给它时num:13还没有定义。  把地址赋值给obj；如果在此调用obj.num，obj还没有存地址值
+    };
+    var fn = obj.fn;
+    fn();52
+    obj.fn();72
+    console.log(window.num,obj.num);
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

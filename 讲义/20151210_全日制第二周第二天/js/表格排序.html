@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        li,ul{list-style: none}
+        li{
+            width: 250px;
+            height:30px;
+            border-bottom: 1px dashed red;
+            line-height: 30px;
+            ;
+        }
+        ul{
+            width: 300px;
+            border:1px solid #333333;
+        }
+
+
+
+
+    </style>
+</head>
+
+<body>
+<ul id="ul1">
+    <li>1</li>
+    <li>2</li>
+    <li>55</li>
+    <li>77</li>
+    <li>44</li>
+    <li style="border:none">33</li>
+</ul>
+<script type="text/javascript" src="utils.js"></script>
+<script type="text/javascript">
+//按照li里面的分数从小到大排序
+    //(1)首先获得我们需要的元素
+    var oUl=document.getElementById("ul1")
+    var oLis = document.getElementsByTagName("li");
+    //(2)首先将元素集合转化为数组
+    var oLisAry=utils.listToArray(oLis);
+    //(3)给我们的数组排序
+oLisAry.sort(function(a,b){
+    return parseFloat(a.innerHTML)-parseFloat(b.innerHTML);
+
+})
+//4,按照数组中的顺序吧我们的li重新的添加到我们的页面中
+for(var i=0;i<oLisAry.length;i++){
+    oUl.
+}
+
+
+
+
+
+    //DOM的映射机制
+    //页面中的元素标签和JS通过DOM方法获取的元素对象是紧紧绑定在一起的 ，一个改变另一个也会发生改变
+//案例一
+//我们之前获取的元素集合和页面中的#ul1这个容器是映射到一起的，页面中新增一个li，我不需要从新的获取oLis,oLis也同样会
+    var oUl
+</script>
+</body>
+</html>

@@ -51,7 +51,8 @@
 
             str += "<li num='" + cur["num"] + "'>";
             for (var key in cur) {
-                str += "<span>" + cur[key] + "</span>";
+                var val=key==="sex"?(cur[key]===1?"男":"女"):cur[key];
+                str += "<span>" + val + "</span>";
             }
             str += "</li>";
         }
@@ -76,7 +77,7 @@
         boxPage.onclick = function (e) {
             e = e || window.event;
             var tar = e.target || e.srcElement;
-            if (tar.id === "onePage") {//->首页
+            if (tar.id === "onePage") {//->首页s
                 curPage = 1;
             } else if (tar.id === "prevPage") {//->上一页
                 if (curPage > 1) {

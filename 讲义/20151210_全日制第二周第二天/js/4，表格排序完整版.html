@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        body.div,table,thead,tbody,tr,th,td{
+            margin:0;
+            padding: 0;
+        font-size: 14px;
+        -webkit-user-select:none ;
+        }
+
+#tab{
+    display: block;
+    width: 400px;
+    margin:20px auto;
+    padding:20px;
+    height: 400px;
+    border: 1px solid #008000;
+    border-radius: 5px;
+    box-shadow:3px 3px 8px  ;
+}
+
+        #tab thead tr th{
+            height:35px;
+            line-height: 35px;
+            width: 100px;
+            background: #7fff8e;
+            cursor: pointer;
+        }
+        #tab tbody tr td{
+            height:35px;
+            line-height: 35px;
+        text-align: center;
+}
+        #tab tbody tr.even{
+            background: #b6ff0e;
+        }
+    </style>
+</head>
+<body>
+<table id="tab" cellspacing="0" cellpadding="0">
+    <!--哪个th的class等于cursor,那么当前的这一列就进行表格排序-->
+    <thead>
+        <tr>
+            <th>姓名</th>
+            <th>年龄</th>
+            <th>分数</th>
+            <th>性别</th>
+        </tr>
+    </thead>
+    <tbody>
+   <!--// 实现奇数行和偶数行变颜色的话，那么-->
+    <tr>
+        <td>王小波</td>
+        <td>48</td>
+        <td>12</td>
+        <td>女</td>
+    </tr>
+    <tr>
+        <td>王小波</td>
+        <td>48</td>
+        <td>84</td>
+        <td>女</td>
+    </tr>
+    <tr>
+        <td>王小波</td>
+        <td>48</td>
+        <td>24</td>
+        <td>女</td>
+    </tr>
+   <tr>
+       <td>王小波</td>
+       <td>48</td>
+       <td>84</td>
+       <td>男</td>
+   </tr>
+   <tr>
+       <td>王小波</td>
+       <td>22</td>
+       <td>54</td>
+       <td>女</td>
+   </tr>
+   <tr>
+       <td>王小波</td>
+       <td>34</td>
+       <td>22</td>
+       <td>男</td>
+   </tr>
+   <tr>
+       <td>王小波</td>
+       <td>456</td>
+       <td>33</td>
+       <td>女</td>
+   </tr>
+   <tr>
+       <td>王小波</td>
+       <td>89</td>
+       <td>234</td>
+       <td>女</td>
+   </tr>
+   <tr>
+       <td>王小波</td>
+       <td>28</td>
+       <td>44</td>
+       <td>女</td>
+   </tr>
+   <tr>
+       <td>王小波</td>
+       <td>58</td>
+       <td>7</td>
+       <td>男</td>
+   </tr>
+    </tbody>
+</table>
+<!--对于一个页面引入了很多的JS文件，根据文件的依赖关系我们需要把引入的顺序调整好-->
+<script type="text/javascript" src="utils.js"></script>
+<script type="text/javascript" src="JSON.js"></script>
+<script type="text/javascript" src="tab.js"></script>
+<script type="text/javascript">
+
+
+
+
+
+
+</script>
+</body>
+</html>

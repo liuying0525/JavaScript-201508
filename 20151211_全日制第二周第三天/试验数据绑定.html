@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        body, ul, li {
+            margin: 0;
+            padding: 0;
+            font-family: "\5FAE\8F6F\96C5\9ED1", Helvetica, sans-serif;
+            font-size: 14px;
+            list-style: none;
+        }
+
+        #ul1 {
+            margin: 20px auto;
+            width: 50%;
+        }
+
+        #ul1 li {
+            height: 35px;
+            line-height: 35px;
+            border-bottom: 1px dashed #08BECE;
+            cursor: pointer;
+        }
+        </style>
+</head>
+<body>
+<ul id="ul1">
+    <li>习近平五大发展理念贯穿十三五全程</li>
+    <li>复旦投毒案凶手林森浩被执行死刑</li>
+</ul>
+<script>
+    var ary = ["习近平五大发展理念贯穿十三五全程", "复旦投毒案凶手林森浩被执行死刑", "习近平五大发展理念贯穿十三五全程", "复旦投毒案凶手林森浩被执行死刑", "习近平五大发展理念贯穿十三五全程", "复旦投毒案凶手林森浩被执行死刑", "习近平五大发展理念贯穿十三五全程", "复旦投毒案凶手林森浩被执行死刑", "习近平五大发展理念贯穿十三五全程", "复旦投毒案凶手林森浩被执行死刑", "习近平五大发展理念贯穿十三五全程", "复旦投毒案凶手林森浩被执行死刑", "习近平五大发展理念贯穿十三五全程", "复旦投毒案凶手林森浩被执行死刑", "习近平五大发展理念贯穿十三五全程", "复旦投毒案凶手林森浩被执行死刑"];
+    var oUl = document.getElementById("ul1");
+    var oLis = oUl.getElementsByTagName("li");
+
+
+    var frg =document.createDocumentFragment()
+    for(var i = 0;i<ary.length;i++){
+        var oLi = document.createElement("li");
+        oLi.innerHTML = ary[i];
+        frg.appendChild(oLi);
+    }
+        oUl.appendChild(frg);
+    frg= null;
+    for(var i = 0;i < oLis.length;i++){
+        oLis[i].onmouseover=function(){
+            this.style.backgroundColor="#ccc";
+        };
+        oLis[i].onmouseout=function(){
+            this.style.backgroundColor="";
+        }
+    }
+
+</script>
+</body>
+</html>

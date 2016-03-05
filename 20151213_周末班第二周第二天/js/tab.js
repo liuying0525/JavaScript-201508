@@ -30,6 +30,7 @@ function bindData() {
     frg = null;
 }
 bindData();
+gnj
 
 //3、实现奇偶行变色
 function changeBg() {
@@ -50,7 +51,7 @@ function sortList(n) {
     _this.flag *= -1;
 
     //A、把tbody下的所有行的类数组转换为数组
-    var rowsAry = utils.listToArray(oRows);
+    var rowsAry = util.listToArray(oRows);
 
     //B、给rowsAry进行排序
     rowsAry.sort(function (a, b) {
@@ -79,6 +80,7 @@ for (var i = 0; i < oThs.length; i++) {
         oTh.index = i;
         oTh.flag = -1;
         oTh.onclick = function () {
+
             sortList.call(this, this.index);
         };
     }

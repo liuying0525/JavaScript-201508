@@ -1,4 +1,5 @@
 var DOM={};//命名空间，或叫名字空间。单例模式
+
 DOM.getIndex=function (ele){//获得ele的索引值
 	var index=0;
 	var p=ele.previousSibling;

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script type="text/javascript">
+    var name = "china";
+    var age = 5000;
+    (function(name,age){
+        name = "zhufeng";
+        age = 7;
+        //把全局的也修改为“zhufeng”,7->在私有作用域中通过制定前缀来强行的修改的全局下的值
+        console.log(name,age);
+        window.name=name;
+        window.age=age;
+    })(name, age);
+    console.log(name,age);
+
+</script>
+</body>
+</html>

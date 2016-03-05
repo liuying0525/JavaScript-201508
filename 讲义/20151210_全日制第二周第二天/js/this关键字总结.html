@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script type="text/javascript">
+    //this是谁和函数在哪儿定义的或者在哪儿执行的都没有任何的关系，想要知道this的指向，我们可以按照如下的规律进行判断：
+    //1，方法执行，看方法名前是否有“。”，有的话,"."前面是谁this就是谁，没有的话this就是window
+    "use strict"//使用严格模式
+//    function fn(){
+//        consle.log(this);
+//    }
+//    var obj = {fn:fn};
+//    fn();//->window
+//    obj.fn();->obj
+
+    //2,自执行函数中的this永远是 window,在严格模式下this指向的是undefined
+    (function(){console.log(this);})();
+    ~function(){console.log(this);}();
+
+    //3，给元素的某一个行为绑定一个方法，当行为触发执行对应的方法，此时方法中的this是当前的元素
+    function fn(){console.log(this);}
+    oDiv.onclick=fn;
+    oDiv.onclick = function(){
+        fn()//window
+    };
+    oDiv.onclick=fn();//把fn执行的返回结果赋值给onclick->oDiv+onclick=undefined
+
+    //5,使用call/apply
+
+    //1）call
+    //方法名。call([])
+
+
+    //注意：
+    //在非严格模式下，
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

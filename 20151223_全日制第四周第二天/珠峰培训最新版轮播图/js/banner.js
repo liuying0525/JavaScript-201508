@@ -58,6 +58,7 @@
         for (var i = 0; i < bannerTipList.length; i++) {
             bannerTipList[i].className = i === index ? "select" : null;
         }
+
     };
 
     //实现图片的切换

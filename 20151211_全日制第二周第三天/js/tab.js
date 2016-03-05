@@ -1,14 +1,16 @@
 //知识点:->关于表格table中自带的一写获取的属性
+//1，获取元素
 //tBodies:获取当前表格下所有的tbody,获取的是一个元素集合
 //rows:获取所有的行(TR)
 //cells:获取每一行中所有的列(TD/TH)
 var oTab = document.getElementById("tab");
-var tBody = oTab.tBodies[0];
-var tHead = oTab.tHead;
-var oThs = tHead.rows[0].cells;
-var oRows = tBody.rows;
+var tBody = oTab.tBodies[0];//tBodies是获取oTab下的所有tbody  表身
+var tHead = oTab.tHead;//获取表格中唯一的tHead  表头
+var oRows = tBody.rows;//获取tbody下所有的tr，行   行
+var oThs = tHead.rows[0].cells;//获取thead下的第一行中的所有的列   列
 
-//1、数据绑定->把json.js中的data里面的内容绑定到tBody中
+
+//2、数据绑定->把json.js中的data里面的内容绑定到tBody中，向body中添加数据
 function bindData() {
     var frg = document.createDocumentFragment();
     for (var i = 0; i < data.length; i++) {
@@ -17,7 +19,7 @@ function bindData() {
         cur.name = cur.name || "--";
         cur.age = cur.age || "25";
         cur.score = cur.score || "0";
-        cur.sex = cur.sex == 0 ? "男" : "女";
+        cur.sex = cur.sex === 0 ? "男" : "女";
 
         //每一次循环数组都创建一个tr
         var oTr = document.createElement("tr");
@@ -34,17 +36,17 @@ function bindData() {
 }
 bindData();
 
-//2、隔行变色
+//3、隔行变色
 function changeBg() {
     for (var i = 0; i < oRows.length; i++) {
         oRows[i].className = i % 2 === 1 ? "even" : null;
     }
 }
 changeBg();
-
-//3、实现表格排序
+//4，鼠标滑过变色
+//5、实现表格排序
 function sortList(index) {
-    //a、将类数组转换为数组
+    //a、将类数组转换为数组，把tbody下的所有行的类数组转化为数组
     var ary = utils.listToArray(oRows);
 
     //b、给数组进行排序(默认都是从小到大)
@@ -62,10 +64,12 @@ function sortList(index) {
     });
 
     //e、实现升降序切换
-    //添加一个标识flag,记录当前列的排列顺序
-    //第一次点击 前-乱序 ->升序(asc)
-    //第二次点击 前-升序 ->降序(desc)
+
+    //默认都是按照升序排序的
+    //第一次点击 前-乱序 ->升序(asc)在后台语言中升序就是用asc表示的
+    //第二次点击 前-升序 ->降序(desc)在后台语言中降序就是用asc表示的
     //第三次点击 前-降序 ->升序
+    //在当前点击的这一列上增加标识flag来记录当前排序的状态
     if (this.flag === "asc") {
         ary.reverse();
         this.flag = "desc";
@@ -85,7 +89,7 @@ function sortList(index) {
     changeBg();
 }
 
-//4、给指定的列绑定单击事件,点击的时候实现我们的排序
+//6、给指定的列绑定单击事件,点击的时候实现我们的排序
 //oThs[2].onclick = function () {
 //    //this->oThs[2]
 //    //sortList();//sortList中的this->window

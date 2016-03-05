@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>批量设置原型上的公有属性和方法</title>
+</head>
+<body>
+<script type="text/javascript">
+    //1,起别名
+    var pro = Fn.prototype;//把原来原型指向的地址赋值给我们的pro，现在它们操作的是同一个内存空间
+
+
+
+
+
+
+
+    function Fn(){
+        this.x=100;
+    }
+    pro.getX = function () {
+        console.log(this.x);
+    };
+    pro.getX = function () {
+        console.log(this.x);
+    }
+    pro.getX = function () {
+        console.log(this.x);
+    }
+    var f1 = new Fn;
+//2,重构原型对象的方式->自己新开辟一个堆内存，存储我们公有的属性和方法，把浏览器
+
+
+
+    //1,只有浏览器天生给Fn.prototype开辟的堆内存里面才有constructor,而我们自己开辟的这个堆内存没有这个属性,这样constructor指向就不再是Fn而是object了
+    console.log(f.constructor);//没做任何处理前 object
+    //为了和原来的一致，需要手动加一个，constructior:Fn
+
+    //2,用这种方式内置类增加公有的属性
+    //给内置类Array增加数组去重的方法
+    Array.prototype = {
+        constructor:Array,
+        unique:function(){
+
+        }
+
+  //我们这种方式会把之前已经存在于原型上的属性和方法给替换掉，所以我们用这种方式修改内置类的话，浏览器是给屏蔽掉的。
+        var ary=[1]
+
+
+
+
+    }
+    function Fn(){
+        this.x=100;
+    }
+Fn.prototype={
+    a:function(){},
+    b: function () {
+
+    },
+    c:fund
+
+
+
+
+
+}
+    var f1 = new Fn;
+</script>
+</body>
+</html>

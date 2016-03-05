@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <title>无标题文档</title>
 <style type="text/css">
-#outer{ width:500px; height:270px; margin:100px auto; overflow:hidden; position:relative;}
+#outer{ width:500px; height:270px; margin:100px auto; overflow:hidden; position:relative;top:300px}
 #inner{ width:500px; height:1350px; position:absolute; top:0; left:0; color:#fff; font-size:72px; text-align:center; line-height:270px; }
 #inner div{ width:500px; height:270px; background:red; }
 #btn{ padding:0; margin:0; position:absolute; list-style:none; right:30px; top:30px; }
@@ -43,7 +43,7 @@ function autoDown(){
 	animate(inner,{top:step*-270},1600);
 	
 }
-//window.setInterval(autoDown,2000);
+window.setInterval(autoDown,2000);
 //inner.style.top=5*-270+"px"//0，1*-270，2*-270，3*-270，5
 oLis.item(0).onclick=autoDown;
 </script>

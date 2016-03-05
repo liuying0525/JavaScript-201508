@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script type="text/javascript">
+
+
+
+    //对象数据类型的作用：
+    //把描述同一个事物或同一个对象的属性和方法放在一个内存空间下，起到了分组作用，这样不同事物之间的属性即使属性名相同，相互也不会发生冲突，我们把这种分组编写代码的模式就做“单例模式”
+    //在单例模式中我们把person1或者person2也叫做“命名空间”
+    var name = "刘莹";
+    var age = 18;
+
+    var name = "王小波";
+    var age = 48;
+
+    console.log(name);//王小波
+
+    var person1={
+        name:"刘莹",
+        age:18
+    };
+    var person2={
+        name:"黄小波",
+        age:48
+    }
+        //单例模式是一种项目开发中经常使用的模式，因为项目中我们可以使用单例模式来进行我们的“模块开发”
+        //"模块开发"：对于一个相对来说比较大的项目，需要多人协作的开发的，我们一般情况下会根据当前项目的需求划分成几个功能模块，每个人负责一部分，同时开发，最后把每个人的代码进行合并。
+    person1.age;
+    person2.name;
+
+
+</script>
+
+</body>
+</html>

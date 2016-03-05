@@ -9,7 +9,8 @@ utils.getCss = function (curEle, attr) {
         if (attr === "opacity") {
             var temp = curEle.currentStyle["filter"];
             reg = /^alpha\(opacity=((?:\d|(?:[1-9]\d+))(?:\.\d+)?)\)$/;
-            temp = reg.exec(temp);
+            val = reg.test(val)?reg.exec(val)[1]:100;
+           // temp = reg.exec(temp);
             val = temp ? temp[1] / 100 : 1;
         } else {
             val = curEle.currentStyle[attr];

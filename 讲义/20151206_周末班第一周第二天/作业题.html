@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script type="text/javascript">
+//    console.log(a);
+//    var a=12;
+//    function fn(){
+//        console.log(a);
+//        a=13;
+//    }
+//    fn();
+//    console.log(a);
+//var foo=1;
+//function bar(){
+//    if(!foo){
+//        var foo=10;
+//    }
+//    console.log(foo);
+//}
+//bar();
+//
+//var a=10,b=11,c=12;
+//function test(a){
+//    a=1;var b=2;c=3;
+//}
+//test(10);
+//alert(a);  alert(b);   alert(c);
+//if(!("a" in window)){
+//    var a=1;
+//}
+//alert(a);
+//var foo='hello';
+//(function(foo){
+//    console.log(foo);
+//    var foo=foo||'world';
+//    console.log(foo);
+//})(foo);
+//console.log(foo);
+var a=9;
+function fn(){
+    a=0;
+    return function(b){ return b+a++; }
+}
+var f=fn();
+var m=f(5);alert(m);
+var n=fn()(5);alert(n);
+var x=f(5);alert(x);
+alert(a);
+
+
+
+
+
+</script>
+
+
+</body>
+</html>

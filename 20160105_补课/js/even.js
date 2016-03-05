@@ -63,17 +63,17 @@ function off(curEle, evenType, evenFn) {
     }
 }
 
-function run(e) {
+function run(e) {//按顺序遍历执行数组
     e = e || window.event;
     var flag = e.target ? true : false;
     if (!flag) {
         e.target = e.srcElement;
         e.pageX = e.clientX + (document.documentElement.scrollLeft || document.body.scrollLeft);
         e.pageY = e.clientY + (document.documentElement.scrollTop || document.body.scrollTop);
-        e.preventDefault = function () {
+        e.preventDefault = function () {//阻止事件的默认行为
             e.returnValue = false;
         };
-        e.stopPropagation = function () {
+        e.stopPropagation = function () {//阻止事件的冒泡
             e.cancelBubble = true;
         };
     }

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        body,html,input{
+            margin:0;
+            padding:0;
+            font-size: 14px;
+        }
+        input{
+            width: 100px;
+            height:50px;
+            float: left;
+            line-height: 100px;
+            text-align: center;
+            margin:10px;
+        }
+
+
+    </style>
+</head>
+<body>
+<input type="button" value="按钮1"/>
+<input type="button" value="按钮2"/>
+<input type="button" value="按钮3"/>
+<input type="button" value="按钮4"/>
+<input type="button" value="按钮5"/>
+<script type="text/javascript">
+//    var oBtn=document.getElementsByTagName("input");
+//    var ary=["red","yellow","pink","green","blue"];
+//        for (var i = 0; i < oBtn.length; i++) {
+//            oBtn[i].index = i;
+//            oBtn[i].onclick = function bindEvent() {
+//                document.body.style.backgroundColor = ary[this.index];
+//            }
+//        }
+var ary=[1,2,3,4];
+function fn(ary){
+    ary[0]=0;    ary=[0];    ary[0]=100;    return ary;
+}
+var res=fn(ary);    console.log(ary);    console.log(res);
+
+
+</script>
+</body>
+</html>

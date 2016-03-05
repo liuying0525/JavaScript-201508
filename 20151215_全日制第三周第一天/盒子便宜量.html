@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script type="text/javascript">
+//溢出？->一个页面有多屏内容，所有超出第一屏幕的内容都属于我们的溢出内容。
+    //获取页面可视窗口的宽度和高度（兼容所有的浏览器）->一屏幕的宽度和高度
+//document.documentElement.clientHeight||document.body.clientHeight
+    //获取整个网页的高度->所有屏加起来的高度
+//总结：如果你当前操作的是浏览器或者整个页面，想兼容所有的浏览器，需要写上document.documentElement.xxx||document.body.xxx(而且顺序不能变)
+
+    //2,offsetParent->父级参照物 parentNode->父亲节点
+//parentNode:在DOM的层级中，当前节点的上一级节点是父亲节点
+//offsetParent:我们的一个页面一般情况下是一个二维平面，所有的元素都在这个平面中，他们默认的父亲参照物body
+//元素的父亲节点和父级参照物是没有必然的联系的
+//console.log(inner.parentNode)//->outer
+//console.log(outer.offsetParent)//->body
+
+//3,偏移量->当前元素（外边框）距离父级参照物的一个偏移的距离
+    //offsetTop：上偏移量
+    // offsetLeft：左偏移量
+
+    //var innerL = inner.offsetLeft;
+    //var
+
+
+//思考题：jQuery中除了有一个叫做offset的方法外，还有一个叫做position的方法
+//function position(curEle){
+
+//获取当前元素距离它的parentNode的偏移量
+
+
+}
+
+
+
+
+
+
+
+    // offsetParent
+    //
+
+
+
+</script>
+</body>
+</html>

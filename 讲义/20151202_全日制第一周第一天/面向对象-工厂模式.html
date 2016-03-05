@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script type="text/javascript">
+   /* var jsperson1 = {
+        name:"王小波",
+        age:48,
+        writeJs:function(){
+            console.log("my name is" + this.name+",i can write js 啦~~");
+        }
+    };
+    var jsperson2 = {
+        name:"尹华芝",
+        age:18,
+        writeJs:function(){
+            console.log("my name is" + this.name+",i can write js 啦~~");
+        }
+    };
+    jsperson1.writeJs()
+    //单例模式虽然解决了分组的作用，但是不能实现批量的生产，属于手工作业模式->“工厂模式”
+    //把实现同一件事情的相同的代码放到一个函数中，以后如果再想实现这个功能，不需要重新的编写这些代码了，只需要执行当前的函数即可。->函数的封装--》“低耦合高内聚”；减少页面中的冗余代码，提高代码的重复利用率。
+*/
+    function createJsPerson(name,age){
+        var obj=();
+        obj.name = name;
+        obj.age = age;
+        writeJs:function(){
+            console.log("my name is" + this.name+",i can write js 啦~~");
+        }
+        return obj;
+    }
+
+    var p1=createJsPerson("王小波",age)
+    p1.writeJs();
+
+    var p1=createJsPerson("尹华芝",age)
+    p1.writeJs();
+
+
+//JS是一门轻量级的脚本“编程语言”（HTML+CSS不属于编程语言，属于标记语言）
+    //.net c# php java c c++ vb vf object-c ...
+    //所有的编程语言都是面向对象开发的。-》类的继承，封装，多态
+    //继承：子类继承父类中的属性和方法
+    //多态：当前方法的多种形态，在后台语言当中：多态指包含 重载和重写
+    //后台中的重载：函数方法名一样，但是传输的参数不一样（类型或者方法），当执行的时候，会根据传递的参数类型，找到对应的函数执行
+    //“JS中不存在重载”，如果方法名一样的话，后面的会把前面的覆盖掉，最后只保留一个
+   //JS中有一个操作类似重载，但不是重载，我们可以根据传递参数的不一样，实现不同的功能
+    function sum(num){
+            if(typeof  num === "undefinede"){
+                return 0;
+            }
+        return num;
+   }
+   sum(100);
+
+    //JS中存在重写，重写：子类重写父类的方法，
+</script>
+</body>
+</html>

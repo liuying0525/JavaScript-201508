@@ -20,7 +20,7 @@
     //借用数组的slice实现将类数组(arguments、DOM元素集合...)转换为数组的时候,arguments在所有的浏览器中都兼容,而DOM元素集合在IE6~8下是不兼容的.
 
     //    //兼容:
-    //    var ary = Array.prototype.slice.call(oLis);
+    //    var ary = Array.prototype.slice.call(oLis);//在IE6，7,对于ARGUMENTS来说所有的都兼容，DOM元素的集合不兼容（不是内置对象）。
     //
     //    //不兼容:
     //    for (var i = 0; i < oLis.length; i++) {

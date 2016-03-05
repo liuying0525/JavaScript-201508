@@ -1,4 +1,4 @@
-﻿1、DOM零级事件常用的都有哪些?
+﻿ 1、DOM零级事件常用的都有哪些?
    onclick、onmouseover、onmousemove、onmouseout、onmouseenter、onmouseleave、onmousedown、onmouseup、onmousewheel、onkeydown、onkeyup、onblur(文本框失去焦点事件)、onfocus(文本框获取焦点事件)、onchange、onscroll、onload、onreadystatechange...
 
 2、事件是由：事件行为本身、给事件绑定方法 两部分组成 ->哪怕你没有给元素绑定方法，当点击的时候也出发了click这个行为本身
